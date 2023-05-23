@@ -171,7 +171,7 @@ namespace TagControl
 
         private void txtPartNo_TextChanged(object sender, EventArgs e)
         {
-            string fcprods = "";
+            //string fcprods = "";
 
 
             string SQL = "SELECT  top 1  *  FROM ViewProduct  WHERE  FCCODE ='" + txtPartNo.Text.ToString().Trim() + "' ORDER BY FCCODE ";
@@ -510,14 +510,14 @@ namespace TagControl
                 byte[] pic = { };
                 byte[] QRpic = { };
                 string QrBarcode;
-                string temCoa = "";
+                //string temCoa = "";
                 //if (checkBox1.Checked == true)
                 //{ temCoa = comboBox5.SelectedItem.ToString().Trim(); }
                 /*
                  * 
                  * 
                  * */
-                Image img = Image.FromFile(@"C:\SDK\8.jpg");
+                Image img = null;
                 try
                 {
                     img = Image.FromFile(@textBox6.Text.ToString().Trim());
